@@ -12,3 +12,25 @@ let stoicBooks = [
   ["On Providence", "Seneca", 55]
 ];
 
+let dynamic_content = "";
+
+for(let book of stoicBooks){
+  dynamic_content += `  <tr>
+                            <td>${book[0]}</td>
+                            <td>${book[1]}</td>
+                            <td>${book[2]}</td>
+                        </tr>
+                        `
+                      }
+
+const tBody = document.querySelector("#table-body");
+tBody.innerHTML = dynamic_content;
+
+let table = document.querySelector(`#stoic-books-table`);
+table.style.marginLeft = "auto";
+table.style.marginRight = "auto";
+
+let h3 = document.querySelector(`h3`);
+h3.style.textAlign = "center";
+
+
